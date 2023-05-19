@@ -1,0 +1,212 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=No75to+Sans+KR:wght@100;300;400;500;700;900&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/*пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: "Montserrat"; }
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+:focus,
+:active {
+  outline: none; }
+
+a:focus,
+a:active {
+  outline: none; }
+
+nav,
+footer,
+header,
+aside {
+  display: block; }
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+input,
+button,
+textarea {
+  font-family: inherit; }
+
+input::-ms-clear {
+  display: none; }
+
+button {
+  cursor: pointer; }
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+a,
+a:visited {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+ul li {
+  list-style: none; }
+
+img {
+  vertical-align: top; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit; }
+
+/*--------------------*/
+.wrapper {
+  max-width: 1447px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 219px; }
+
+.auto {
+  width: 626px;
+  height: 366px;
+  background-image: url("../img/auto.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: relative; }
+
+.wheel {
+  position: absolute;
+  height: 45px;
+  width: 45px;
+  background-image: url("../img/icons/rims.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  border-radius: 100%;
+  animation: spin 15s linear infinite;
+  scale: 1; }
+
+.front {
+  top: 50.6%;
+  left: 25.6%; }
+
+.rear {
+  top: 50.6%;
+  right: 27%; }
+
+.door {
+  position: absolute;
+  width: 30px;
+  height: 10px;
+  top: 43.7%;
+  left: 48%;
+  cursor: pointer; }
+
+@keyframes spin {
+  from {
+    rotate: 3600deg; }
+  to {
+    rotate: 0deg; } }
+
+.row {
+  display: flex;
+  gap: 54px; }
+  .row .btns,
+  .row .btns_right {
+    display: flex;
+    flex-direction: column;
+    gap: 1px; }
+    .row .btns h3,
+    .row .btns_right h3 {
+      font-weight: 500;
+      color: #707070; }
+    .row .btns p,
+    .row .btns_right p {
+      font-weight: 700;
+      font-size: 48px;
+      color: #000000; }
+  .row .btns {
+    position: relative;
+    padding-right: 50px; }
+    .row .btns .btns {
+      position: absolute;
+      top: 0;
+      right: -50px;
+      gap: 5px; }
+      .row .btns .btns button {
+        all: unset;
+        cursor: pointer;
+        width: 25px;
+        height: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain; }
+      .row .btns .btns .top {
+        background-image: url("../img/icons/top.svg"); }
+      .row .btns .btns .bottom {
+        background-image: url("../img/icons/bottom.svg"); }
+  .row .btns_right {
+    gap: 8px; }
+    .row .btns_right .off,
+    .row .btns_right .on {
+      width: 39px;
+      height: 24px;
+      border-radius: 50px;
+      background: gray;
+      position: relative; }
+      .row .btns_right .off::after,
+      .row .btns_right .on::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        translate: 0 -50%;
+        border-radius: 100%;
+        width: 17px;
+        height: 17px;
+        background-color: #fff; }
+    .row .btns_right .on {
+      background: royalblue; }
+      .row .btns_right .on::after {
+        left: 47%; }
+
+.row_parent {
+  flex-direction: column;
+  align-items: center;
+  gap: 55px; }
+
+.row_top {
+  gap: 117px; }
+
+.final {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; }
+  .final p:first-child {
+    font-weight: 500;
+    font-size: 20px;
+    color: #707070; }
+  .final p:last-child {
+    font-weight: 700;
+    font-size: 64px;
+    color: #000000; }
