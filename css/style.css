@@ -91,8 +91,10 @@ h6 {
   background-image: url("../img/auto.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
-  position: relative; }
+  background-size: 100%;
+  position: relative;
+  scale: 1;
+  transition: .5s linear; }
 
 .wheel {
   position: absolute;
@@ -112,7 +114,7 @@ h6 {
 
 .rear {
   top: 50.6%;
-  right: 27%; }
+  right: 26.6%; }
 
 .door {
   position: absolute;
@@ -160,7 +162,10 @@ h6 {
         height: 25px;
         background-repeat: no-repeat;
         background-position: center;
-        background-size: contain; }
+        background-size: contain;
+        transition: .3s ease; }
+        .row .btns .btns button:hover {
+          opacity: .8; }
       .row .btns .btns .top {
         background-image: url("../img/icons/top.svg"); }
       .row .btns .btns .bottom {
@@ -173,7 +178,8 @@ h6 {
       height: 24px;
       border-radius: 50px;
       background: gray;
-      position: relative; }
+      position: relative;
+      transition: .3s linear; }
       .row .btns_right .off::after,
       .row .btns_right .on::after {
         content: '';
@@ -184,11 +190,12 @@ h6 {
         border-radius: 100%;
         width: 17px;
         height: 17px;
-        background-color: #fff; }
+        background-color: #fff;
+        transition: .3s linear; }
     .row .btns_right .on {
       background: royalblue; }
       .row .btns_right .on::after {
-        left: 47%; }
+        left: 46.7%; }
 
 .row_parent {
   flex-direction: column;
@@ -210,3 +217,45 @@ h6 {
     font-weight: 700;
     font-size: 64px;
     color: #000000; }
+
+.modal {
+  padding: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  translate: -50% 0%;
+  width: 100%;
+  display: none;
+  opacity: 0;
+  transition: .3s ease; }
+  .modal .auto {
+    scale: 1;
+    background-image: url("../img/black.jpg");
+    transition: .5s linear; }
+
+.modal_bg {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #00000080; }
+
+.colors {
+  gap: 6px !important; }
+
+.select {
+  display: flex;
+  align-items: center;
+  gap: 5px; }
+  .select button {
+    border-radius: 100%;
+    width: 35px;
+    height: 35px; }
+  .select .black {
+    background: #262626; }
+  .select .silver {
+    background: #EFEFEF; }
+  .select .gold {
+    background: #E6DDD0; }
